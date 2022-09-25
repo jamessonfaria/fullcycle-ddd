@@ -1,6 +1,6 @@
 /*
 *
-* Essa entidade é uma entidade anemica, pois apenas armazena dados
+* Essa entidade é um dominio rico, contem regras de negocio
 *
 */
 
@@ -8,6 +8,7 @@ class Customer {
     _id: string;
     _name: string;
     _address: string;
+    _active: boolean = true;
 
     constructor(id: string, name: string, address: string) {
         this._id = id;
@@ -15,23 +16,20 @@ class Customer {
         this._address = address;
     }
 
-    get id(): string {
-        return this._id;
-    }
-
-    get name(): string {
-        return this._name;
-    }
-
-    get address(): string {
-        return this._address;
-    }
-    
-    public set name(name: string) {
+    // motivo de negocio, nao apenas um set
+    changeName(name: string) {
         this._name = name;
     }
 
-    public set address(address : string) {
-        this._address = address;
+    // expressa o negocio
+    activate(){
+        this._active = true;
     }
+
+    // expressa o negocio
+    deactivate() {
+        this._active = false;
+    }
+ 
+
 }
