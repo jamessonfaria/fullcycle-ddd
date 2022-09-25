@@ -4,6 +4,9 @@
 * 1- É necessario garantir a integridade dos dados, preciso ter todos os dados obrigatorios ao inicializar
 * o objeto precisa ser confiavel 100% das vezes
 * 2- Uma entidade por padrao sempre tera que se autovalidar 
+* 3- Esta entidade é focada em negocio, no ORM a entidade e focada em persistencia, sao coisas separadas
+* e com responsabilidades diferentes, por isso devem ser classes separadas, entity e model por exemplo
+*
 */
 
 class Customer {
