@@ -1,4 +1,4 @@
-import { Address } from './address';
+import Address from './address';
 /*
 *
 * Essa entidade é um dominio rico, contem regras de negocio
@@ -10,7 +10,7 @@ import { Address } from './address';
 *
 */
 
-class Customer {
+export default class Customer {
     _id: string;
     _name: string;
     _address!: Address;
@@ -55,6 +55,3 @@ class Customer {
         this._address = address;
     }
 }
-
-// caso seja enviado o nome vazio a autovalidacao dara erro
-let customer = new Customer("123", "");

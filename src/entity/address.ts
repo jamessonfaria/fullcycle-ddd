@@ -6,7 +6,7 @@
  * 4- Possibilidade de visualizar informacoes, ex: toString()
 */
 
-export class Address {
+export default class Address {
     _street: string = ""
     _number: number = 0;
     _zip: string = "";
